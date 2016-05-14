@@ -2,6 +2,12 @@ package Arrays;
 
 /**
  * Created by 61310444 on 5/6/2016.
+ * Given an array of integers, print the leaders in the array. A leader is an element which is larger than all the elements in the array to its right.
+ For example:
+ Input Array:
+ { 98, 23, 54, 12, 20, 7, 27 }
+ Output:
+ Leaders- 27 54 98
  */
 public class LeadersInArray {
     public static void main(String[] args) {

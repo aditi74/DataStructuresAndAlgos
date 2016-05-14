@@ -2,6 +2,12 @@ package Arrays;
 
 /**
  * Created by 61310444 on 5/6/2016.
+ * Given two sorted arrayA and arrayB such that arrayA has enough void spaces in it to be able to accommodate arrayB in it.
+ * Void spaces in an array are denoted using INVALID_NUM.
+ * Write a program to merge arrayB into arrayA such that resulting array is a sorted array. The expected space complexity is O(1).
+
+ For example, if arrayA = {-3, 5, INVALID_NUM, 7, INVALID_NUM, 10, INVALID_NUM, 11, INVALID_NUM} and arrayB = {-1, 2, 6, 12}
+ then arrayS should be modified to array - {-3, -1, 2, 5, 6, 7, 10, 11, 12}
  */
 /***merge-two-sorted-arrays-without-extra-space**/
 public class MergeSortedArrays {

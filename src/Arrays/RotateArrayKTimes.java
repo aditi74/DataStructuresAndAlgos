@@ -1,7 +1,15 @@
 package Arrays;
 
 /**
- * Created by 61310444 on 5/4/2016.
+ *Given an array and a positive integer k, rotate the array k times.
+ Example:
+ Array:  1 2 3 4 5
+ k: 1
+ Output: 2 3 4 5 1
+ k: 2
+ Output: 3 4 5 1 2
+ k: 3
+ Output: 4 5 1 2 3
  */
 public class RotateArrayKTimes {
     public static void main(String[] args) {

@@ -2,6 +2,11 @@ package Arrays;
 
 /**
  * Created by 61310444 on 5/6/2016.
+ * Given an array of unordered positive and negative integers, find the maximum subarray sum in the array.
+ For example:
+ Array: {2, -9, 5, 1, -4, 6, 0, -7, 8}
+ Output:
+ Maximum subarray sum is 9
  */
 /**maximum-subarray-sum**/
 /*  Using Kadane Algo**/

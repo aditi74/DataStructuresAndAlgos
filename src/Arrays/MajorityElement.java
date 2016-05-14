@@ -2,6 +2,7 @@ package Arrays;
 
 /**
  * Created by 61310444 on 5/6/2016.
+ * Given an array of size n, find the element which occurs more than n/2 times. This element is called Majority Element.
  */
 
 /***Using Boyer-Moore Vote Algorithm**/
