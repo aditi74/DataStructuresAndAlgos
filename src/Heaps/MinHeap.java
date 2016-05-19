@@ -56,6 +56,11 @@ public class MinHeap  extends Heap{
         }
     }
 
+    @Override
+    public boolean isEmpty()
+    {
+      return (this.heapSize==0)  ;
+    }
     public void deleteMin()
     {
         if (isEmpty())throw new RuntimeException("Heap is empty");
@@ -99,7 +104,7 @@ public class MinHeap  extends Heap{
             //swap the variables
             int tmp=data[nodeIndex];
             data[nodeIndex]=data[minIndex];
-            data[minIndex]=data[nodeIndex];
+            data[minIndex]=tmp;
             percolateDown(minIndex);
         }
     }

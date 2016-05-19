@@ -13,10 +13,8 @@ public abstract class Heap {
         heapSize=0;
     }*/
 
-    public boolean isEmpty()
-    {
-         return (heapSize==0);
-    }
+    public abstract boolean isEmpty();
+
 
     public int getLeftChild(int nodeIndex)
     {
