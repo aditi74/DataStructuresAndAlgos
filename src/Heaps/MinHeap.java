@@ -61,7 +61,7 @@ public class MinHeap  extends Heap{
     {
       return (this.heapSize==0)  ;
     }
-    public void deleteMin()
+    public void deleteMin() //O(logn)
     {
         if (isEmpty())throw new RuntimeException("Heap is empty");
 
@@ -106,6 +106,25 @@ public class MinHeap  extends Heap{
             data[nodeIndex]=data[minIndex];
             data[minIndex]=tmp;
             percolateDown(minIndex);
+        }
+    }
+ /*
+    Start from the middle element of the array, let’s say i
+    Heapify with given index.
+    Decrease index by one. Repeat step 2 till we reach first element.
+    Operation O(n)*/
+
+    public void buildHeap(int[] arr)
+    {
+        for (int i =0;i<arr.length;i++)
+        {
+            data[i]=arr[i];
+        }
+        int mid=arr.length/2;
+        heapSize=arr.length;
+        for(int i=mid;i>=0;i--)
+        {
+            percolateDown(i);
         }
     }
 
