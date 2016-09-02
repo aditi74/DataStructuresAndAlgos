@@ -33,7 +33,7 @@ class GfG
 
         if (ob==null||ob.top==null)
         {
-            System.out.print("I am here ob is null");
+            System.out.print("I am*/*/ here ob is null");
             ob.top=node;
 
         }
