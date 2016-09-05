@@ -159,7 +159,10 @@ class BinaryTreeImplementation
       /*  boolean tree=binaryTreeImplementation.checkTreesIdentical(node,nodeA);
         System.out.println("Is trees identical "+ tree);*/
 
-        binaryTreeImplementation.levelOrderReversal(node);
+       // binaryTreeImplementation.levelOrderReversal(node);
+       // binaryTreeImplementation.spiralOrder(node);
+
+        binaryTreeImplementation.SpiralTraversal(node);
 
 
     }
@@ -215,6 +218,66 @@ class BinaryTreeImplementation
 
 
     }
+
+
+
+
+
+      public void SpiralTraversal(BinaryTree root)
+      {
+          if (root==null)
+              return;
+
+          Stack<BinaryTree> currentLevel= new Stack<>();
+          Stack<BinaryTree> nextLevel = new Stack<>();
+
+          currentLevel.push(root);
+
+          int righttoleft=1;
+
+          while (!currentLevel.isEmpty())
+          {
+              BinaryTree temp =currentLevel.peek();
+              currentLevel.pop();
+
+              if (temp!=null)
+              {
+
+                  System.out.print(temp.data + " ");
+                  if (righttoleft==1)
+                  {   if (temp.right!=null)
+                      nextLevel.push(temp.right);
+
+                      if(temp.left!=null)
+                          nextLevel.push(temp.left);
+                  }
+
+                 else {
+
+                      if(temp.left!=null)
+                          nextLevel.push(temp.left);
+                      if (temp.right!=null)
+                          nextLevel.push(temp.right);
+                  }
+
+                  if (currentLevel.isEmpty())
+                  {
+                      righttoleft=1-righttoleft;
+                      Stack<BinaryTree> tempStack= new Stack<>();
+                      tempStack =currentLevel;
+                      currentLevel=nextLevel;
+                      nextLevel=tempStack;
+                  }
+
+              }
+
+
+
+
+          }
+
+      }
+
 
 }
 
