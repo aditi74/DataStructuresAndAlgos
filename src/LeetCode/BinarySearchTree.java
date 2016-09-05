@@ -167,6 +167,32 @@ class BinaryTreeImplementation
 
     }
 
+    public boolean hasPathSum(BinaryTree node, int sum)
+    {
+        if (node==null)
+            return (sum==0);
+
+        else
+        {
+            int subsum= sum-node.data;
+
+            if (subsum==0 && node.left==null && node.right==null)
+                return true;
+            boolean ans=false;
+            if (node.left!=null)
+                ans= ans||hasPathSum(node.left,subsum);
+
+            if (node.right!=null)
+                ans=ans|| hasPathSum(node.right,subsum);
+            return ans;
+        }
+
+
+
+
+    }
+
+
 
   @SuppressWarnings("rawtypes")
     public void levelOrderReversal(BinaryTree root)
